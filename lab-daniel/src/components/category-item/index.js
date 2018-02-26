@@ -1,5 +1,6 @@
 import React from 'react';
 import CategoryForm from '../category-form/';
+import {connect} from 'react-redux';
 import {renderIf} from '../../lib/utils';
 import {categoryUpdate} from '../../actions/category-actions';
 
@@ -19,7 +20,7 @@ class CategoryItem extends React.Component {
     return (
       <div onDoubleClick={this.handleDoubleClick}>
         <h3>{this.props.category.title}</h3>
-        {renderIf(this.state.editing, <CategoryForm category={this.props.category} onComplete={this.props.onComplete}/>)}
+        {renderIf(this.state.editing, <CategoryForm category={this.props.category} buttonText='update' onComplete={this.props.categoryItemCategoryUpdate}/>)}
       </div>
     );
   }

@@ -2,8 +2,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import createStore from '../../lib/store';
 import {BrowserRouter, Route} from 'react-router-dom';
-import Landing from '../landing/';
-import Dashboard from '../landing/';
+import Dashboard from '../dashboard/';
 
 const store = createStore();
 
@@ -17,7 +16,7 @@ class App extends React.Component {
       <main className='main-content'>
         <Provider store={store}>
           <BrowserRouter>
-            <Route exact path='/dashboard' component={Dashboard}/>
+            <Route exact path='/' component={Dashboard}/>
           </BrowserRouter>
         </Provider>
       </main>

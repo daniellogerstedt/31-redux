@@ -10,8 +10,8 @@ class Dashboard extends React.Component {
       <div>
         <h1>Welcome to my CATEGORY Board</h1>
         <CategoryForm buttonText='create' onComplete={this.props.dashboardCategoryCreate}/>
-        {this.props.categorys ? 
-          this.categorys.map(category => 
+        {this.props.categories ? 
+          this.props.categories.map(category => 
             <CategoryItem key={category._id} category={category}/>
           )
           :
